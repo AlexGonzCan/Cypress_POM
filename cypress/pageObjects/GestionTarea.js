@@ -12,6 +12,9 @@ export  class GestionTarea {
         }
 
     }
+    navigateTodo(){
+        cy.visit(this.web);
+    }
     completarTarea(){
         cy.get(this.newTask).should("be.visible").type("comprar una mesa{enter}")
         cy.get(this.task.text_task).should("contain.text", "comprar una mesa")

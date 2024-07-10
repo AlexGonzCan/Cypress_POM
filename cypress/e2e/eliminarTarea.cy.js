@@ -2,7 +2,7 @@ import {gestionTarea} from "../pageObjects/GestionTarea";
 describe('Eliminar Tarea', () => {
     beforeEach(()=>{
 
-        cy.visit(gestionTarea.web);
+        gestionTarea.navigateTodo()
     })
     it('Eliminar tarea', () => {
         gestionTarea.eliminarTarea()
